@@ -1,6 +1,6 @@
 # Bryz Jobs
 
-A private job application tracker. Static site, no build step, no libraries. Published at <https://supbrice.github.io/pipely/> (GitHub Pages from `main` of `supbrice/pipely`).
+A private job application tracker. Static site, no build step, no libraries. Published at <https://supbrice.github.io/bryz-jobs/> (GitHub Pages from `main` of `supbrice/bryz-jobs`; the old address supbrice.github.io/pipely/ forwards here).
 
 The code is public. Your applications are not in the repo. They live in this browser's `localStorage` and can optionally sync through a secret GitHub Gist.
 
@@ -48,7 +48,7 @@ Your data → **Cloud sync**.
 - **Auto-pull**: on load, if this browser is empty or only has examples, the gist list fills it. Otherwise a banner offers to pull.
 - **Auto-push**: after a save, pushes to the gist when a token is set.
 
-A link ending in `#pipely-gist=<gist id>` saves that gist id with auto-pull on and then clears itself from the address bar, which is the quickest way to set up a new device.
+A link ending in `#bryz-jobs-gist=<gist id>` (or the older `#pipely-gist=<gist id>`, still supported) saves that gist id with auto-pull on and then clears itself from the address bar, which is the quickest way to set up a new device.
 
 Do not commit tokens or application JSON to this repo (`.gitignore` excludes `*.json` and `*.csv`; the test fixture is fake data added on purpose). Anyone with the raw gist URL can read it, so treat the gist id like a private link.
 

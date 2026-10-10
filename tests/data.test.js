@@ -17,6 +17,8 @@ test("storage key and gist settings match the previous app", () => {
   assert.equal(J.gistHashId("#pipely-gist=0123456789abcdef0123456789abcdef"), "0123456789abcdef0123456789abcdef");
   assert.equal(J.gistHashId("#pipely-sync=abc123"), "abc123");
   assert.equal(J.gistHashId("#bryz-jobs-gist=abc123"), "abc123");
+  assert.equal(J.gistHashId("#bryz-jobs-sync=ABC123"), "ABC123");
+  assert.equal(J.gistHashId("#bryz-jobs-gist=0123456789abcdef0123456789abcdef"), "0123456789abcdef0123456789abcdef");
   assert.equal(J.gistHashId("#other"), "");
 });
 
