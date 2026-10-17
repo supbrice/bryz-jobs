@@ -877,6 +877,14 @@
       if (id === "calendar") renderJcal();
     }
   });
+  // Logo/name: always go home. If already on #/ (no hashchange fires), just scroll to the top.
+  const brand = document.querySelector(".top .brand");
+  if (brand) brand.addEventListener("click", (e) => {
+    if (e.defaultPrevented || e.button > 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
+    if (location.hash !== "#/") location.hash = "#/";
+    window.scrollTo(0, 0);
+  });
   (async function bootCloudSync() {
     const cfg = getSyncConfig();
     if (cfg.gistId === J.RETIRED_GIST_ID) {
